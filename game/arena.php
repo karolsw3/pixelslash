@@ -36,7 +36,10 @@
 	</div>
 <?php
 	$user_login = $_SESSION['login'];
-	$query1 = mysqli_query($a, "select * from users where user !='$user_login' ");
+	$query = mysqli_query($a,"select * from users where user ='$user_login'");
+	$this_user_info = mysqli_fetch_array($query);
+	$this_user_lvl = $this_user_info['lvl']+1;
+	$query1 = mysqli_query($a, "select * from users where user !='$user_login' and `lvl`<='$this_user_lvl' LIMIT 0 , 8");
 	$how_much_users = mysqli_num_rows($query1);
 
 	for($x=0;$x<$how_much_users;$x++){

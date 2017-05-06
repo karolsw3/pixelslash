@@ -14,7 +14,7 @@
 	$lang_User = "Username";
 	$lang_Enter = "Enter the game";
 	$lang_LoginSuccess = "Logged successfully";
-	$lang_LoginFailed = "Login failed! User with that login and password doesn't exists";
+	$lang_LoginFailed = "Login failed! User with that login and password doesn't exist";
 	$lang_logout = "Successfully logged out";
 	$lang_sliverCoins_short = "sc";
 	$lang_goldenCoins_short = "gc";

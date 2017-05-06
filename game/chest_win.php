@@ -25,8 +25,9 @@
 			$chest_info = mysqli_fetch_array($query); 
 		}
 		if($chest_info['id'] != null){
-			$chest_id = $chest_info['id'].";";
-			mysqli_query($a, "UPDATE `p505207_db`.`users` SET `chests`=`chests`+'$chest_id' WHERE `users`.`user`='$user_name'");
+			$chest_id = $chest_info['id'];
+			$chest_id .= ";";
+			mysqli_query($a, "UPDATE `p505207_db`.`users` SET `chests`=CONCAT(`chests`,'$chest_id') WHERE `users`.`user`='$user_name'");
 		}
 	}
 ?>
