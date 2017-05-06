@@ -1,5 +1,6 @@
 <?php
 	include("user_stats.php");
+	$_SESSION['page'] = 0;
 ?>
 <div id="buttons2">
 	<button onclick="sound_play('click'); display('arena.php')" class="game_button"><p><img src="images/sword_button.png" height="30"><?php echo $lang_Arena ?><img src="images/shield_button.png" height="30"></p></button>

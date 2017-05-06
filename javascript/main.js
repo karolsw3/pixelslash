@@ -66,7 +66,9 @@ function communicat(type, text){
 	post_data('game/communicat.php', data, 'game');
 }
 
-
+function show_page(page_number){
+	post_data('game/changepage.php', 'page='+page_number, 'game');
+}
 
 window.setInterval(function(){
   var seconds_left = parseInt($("#energy_seconds_left").text());
