@@ -96,7 +96,7 @@
 					$item_id = $player_equipment[$i];
 					$query = mysqli_query($a,"select * from items where id='$item_id'");
 					$item_info = mysqli_fetch_array($query);
-					$item_price = $item_info['price']/2; // 50% off the real price in shop
+					$item_price = $item_info['price']/4; // 25% of the real price in shop
 					unset($player_equipment[$i]);
 					$updated_player_equipment = implode(";",$player_equipment);
 				}

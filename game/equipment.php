@@ -44,7 +44,7 @@
 		</div>
 		<div class="arena_cell" style="height: auto; border-bottom: 3px solid rgba(0,0,0,0.5)">
 			<?php if($action == "equip"){ ?>
-				<a style="margin: auto 0" onclick="sound_play('click'); item_action(<?php echo $item_index_in_player_eq ?>,'sell');"><p class="sell" style="color: red"><?php echo $GLOBALS['lang_Sell']."(".$item_info['price']/2 ?><img src="images/silver_coin.png" height="19">)</p></a>
+				<a style="margin: auto 0" onclick="sound_play('click'); item_action(<?php echo $item_index_in_player_eq ?>,'sell');"><p class="sell" style="color: red"><?php echo $GLOBALS['lang_Sell']."(".$item_info['price']/4 ?><img src="images/silver_coin.png" height="19">)</p></a>
 			<?php } ?>
 		</div>
 		<?php

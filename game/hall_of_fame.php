@@ -27,15 +27,19 @@
 			<p style="margin: auto"><?php echo $user_info['lvl']."lvl ".$user_info['user'] ?></p>
 		</div>
 	<?php		
-	}	
+	}
+	?>
+	<div style="display: flex">
+	<?	
 	if($page>0){
 		?>
-			<button onclick="show_page(<?php echo $page-1 ?>)"/><?php echo $page ?></button>
+			<a class="buy" style="color: green" onclick="show_page(<?php echo $page-1 ?>)"/><?php echo $page ?></a>
 		<?php
 	}
 	?>
 	<p><?php echo $page+1 ?></p>
-	<button onclick="show_page(<?php echo $page+1 ?>)"/><?php echo $page+2 ?></button>
+	<a class="buy" style="color: green" onclick="show_page(<?php echo $page+1 ?>)"/><?php echo $page+2 ?></a>
+	</div>
 	<?php
 	$which_button = 'back';
 	include('buttons.php');
