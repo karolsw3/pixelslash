@@ -36,4 +36,6 @@
 	$lang_Monsters = "Monsters";
 	$lang_Players = "Players";
 	$lang_Reward = "Reward";
+	$lang_Hall_Of_Fame = "Hall of fame";
+	$lang_Bestplayers = "The best players";
 ?>

@@ -9,7 +9,7 @@
 	
 ?>
 	<div class="flex" style="background: rgba(0,0,0,0.8); padding: 12px">
-			<p><?php echo $lang_Players ?></p>
+			<p><?php echo $lang_Bestplayers ?></p>
 	</div>
 <?php
 	$query1 = mysqli_query($a, "select * from users order by lvl desc");

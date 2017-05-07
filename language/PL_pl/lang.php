@@ -34,4 +34,6 @@
 	$lang_Monsters = "Potwory";
 	$lang_Players = "Gracze";
 	$lang_Reward = "Nagroda";
+	$lang_Hall_Of_Fame = "Ranking";
+	$lang_Bestplayers = "Najlepsi gracze";
 ?>
