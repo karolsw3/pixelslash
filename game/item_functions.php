@@ -36,7 +36,10 @@
 
 					for($x=0;$x<count($types_of_eq_acctually_weared_by_user);$x++){
 						if($item_info['type'] == $types_of_eq_acctually_weared_by_user[$x]){ // User already have this type of item weared!
-							echo "You cannot wear two ".$item_info['type']."s!";
+							echo "You cannot wear two items of the same type";
+							?>
+							<button onclick="sound_play('click'); display('shop_gui.php');" class="game_button"><p><?php echo $lang_Back ?></p></button>
+							<?php
 							exit();
 						}
 						$types_of_eq_acctually_weared_by_user[$x] = null;
@@ -44,6 +47,9 @@
 
 					if($player_lvl<$item_info["lvl"]){
 						echo "This item is for ".$item_info["lvl"]."lvl players. You have got ".$player_lvl."lvl";
+						?>
+						<button onclick="sound_play('click'); display('shop_gui.php');" class="game_button"><p><?php echo $lang_Back ?></p></button>
+						<?php
 						exit();
 					}
 
