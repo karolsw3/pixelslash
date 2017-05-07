@@ -82,12 +82,15 @@ window.setInterval(function(){
 
 function attack_animation(){
 	var user_hp = parseInt($("#actual_user_hp").html());
+	if(user_hp === NaN){
+		user_hp = 1;
+	}
 	var max_user_hp = parseInt($("#user_hp").html());
 
 	var percent_user_hp = (user_hp/max_user_hp);
 
 	var opponent_hp = $("#opponent_hp").val();
 	console.log(user_hp+" lol "+percent_user_hp+" lol "+max_user_hp);
-	$("#progress").css({"width":percent_user_hp});
+	$("#progress").css({"width":percent_user_hp*100});
 }
 
