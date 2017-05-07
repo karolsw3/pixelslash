@@ -96,7 +96,7 @@
 	</div>
 
 	<div class="flex">
-		<p style="color: #ff1717; margin-left: 20px"><b><?php echo $lang_hp_short ?>: </b></p><p><?php echo $user_hp ?></p>
+		<p style="color: #ff1717; margin-left: 20px"><b><?php echo $lang_hp_short ?>: </b></p><p id="user_hp"><?php echo $user_hp ?></p>
 		<p style="color: #ff17ff; margin-left: 20px"><b>ENERGY: </b></p><p><?php echo $user_energy."/".$user_maxenergy ?></p>
 		<p style="margin-left: 3px; color:#303030">(</p><p id="energy_seconds_left" style="color: #303030">
 		<?php 
@@ -106,6 +106,11 @@
 			}
 		?>
 		</p><p style="color: #303030">)</p>
+	</div>
+	<div class="flex">
+		<div id="bar">
+			<div id="progress"></div>
+		</div>
 	</div>
 </div>
 

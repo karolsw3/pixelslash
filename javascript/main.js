@@ -80,3 +80,13 @@ window.setInterval(function(){
   }
 }, 1000);
 
+function attack_animation(){
+	var user_hp = $("#actual_user_hp").val();
+	var max_user_hp = $("#user_hp").val();
+
+	var percent_user_hp = user_hp/max_user_hp;
+
+	var opponent_hp = $("#opponent_hp").val();
+	$("#progress").style({"width":percent_user_hp});
+}
+

@@ -107,7 +107,7 @@
 
 </div>
 
-<button class="game_button" onclick="sound_play('click'); post_data('game/attack.php', '<?php echo $data ?>', 'log')"><p><?php echo "Attack"; ?></p></button>
+<button class="game_button" onclick="sound_play('click'); post_data('game/attack.php', '<?php echo $data ?>', 'log'); attack_animation()"><p><?php echo "Attack"; ?></p></button>
 <div id="log" style="text-align: center">
 
 </div>

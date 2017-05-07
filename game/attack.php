@@ -53,8 +53,8 @@
 		exit();
 	}
 
-	echo "<p>".$user_name.$lang_attacked.$opponent_name." (".$lang_hp_short.":".$_SESSION['opponent_hp'].")</p>";
+	echo "<p id='opponent_hp'>".$_SESSION['opponent_hp']."</p>";
 
-	echo "<p style='color: red'>".$opponent_name.$lang_attacked.$user_name." (".$lang_hp_short.":".$_SESSION['user_hp'].")</p>";
+	echo "<p id='user_hp'>".$_SESSION['user_hp']."</p>";
 
 	

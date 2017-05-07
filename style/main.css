@@ -151,3 +151,13 @@ p {
 .arena_cell:nth-child(even){
 	background: rgba(0,0,0,0.3);
 }
+#bar{
+	width: 300px;
+	background: grey;
+	height: 20px;
+}
+#progress{
+	width: 0;
+	background: red;
+	height: 100%;
+}
