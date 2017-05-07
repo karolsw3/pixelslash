@@ -60,6 +60,7 @@ p {
 	margin: 0;
 	background: url("../images/back.png") repeat-y;
 	background-size: 100%;
+	text-align: center;
 }
 
 .game_button,input,.panel {
