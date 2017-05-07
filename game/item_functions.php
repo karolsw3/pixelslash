@@ -36,8 +36,8 @@
 
 					for($x=0;$x<count($types_of_eq_acctually_weared_by_user);$x++){
 						if($item_info['type'] == $types_of_eq_acctually_weared_by_user[$x]){ // User already have this type of item weared!
-							echo "You cannot wear two items of the same type";
 							?>
+							<p style="text-align: center">You cannot wear two items of the same type</p>
 							<button onclick="sound_play('click'); display('shop_gui.php');" class="game_button"><p><?php echo $lang_Back ?></p></button>
 							<?php
 							exit();
