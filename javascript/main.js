@@ -81,7 +81,7 @@ window.setInterval(function(){
 }, 1000);
 
 function attack_animation(){
-	$("#attack").animate({"opacity":"0"}, 500).animate({"opacity":"1"}, 500);
+	$("#attack").animate({"opacity":"0"}, 100).animate({"opacity":"1"}, 100);
 	var user_hp = parseInt($("#actual_user_hp").html());
 	if(user_hp === NaN){
 		user_hp = 1;
@@ -97,7 +97,7 @@ function attack_animation(){
 		opponent_hp = 1;
 	}
 	var opponent_hp = (opponent_hp/max_opponent_hp)*100;
-	$("#progress").animate({"width":user_hp+"%"}, 500);
-	$("#progress_opponent").animate({"width":opponent_hp+"%"}, 500);
+	$("#progress").animate({"width":user_hp+"%"}, 200);
+	$("#progress_opponent").animate({"width":opponent_hp+"%"}, 200);
 }
 
