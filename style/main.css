@@ -16,7 +16,9 @@ html{
 	image-rendering: -webkit-crisp-edges;
 	-ms-interpolation-mode: nearest-neighbor;
 }
-
+img{
+	 image-rendering: pixelated;
+}
 body {
 	max-width: 570px;
 	background-color:black; 

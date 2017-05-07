@@ -6,12 +6,21 @@
 	$login = $_SESSION['login'];
 ?>
 
-<html style="image-rendering: pixelated;">
+<html>
 
 <head>
 	<title>Pixel slash alpha</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="style/main.css" rel="stylesheet" type="text/css" />
+	<style>
+		span a{
+			pointer-events: none;
+			cursor: default;
+			color: rgba(140,140,140,0.5);
+			text-align: center;
+			text-shadow: 2px 2px 1px black;
+		}
+	</style>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.min.js"></script>
 	<script src="javascript/main.js"></script>
@@ -54,15 +63,4 @@
 </body>
 
 </html>
-
-<style>
-
-span a{
-	pointer-events: none;
-	cursor: default;
-	color: rgba(140,140,140,0.5);
-	text-align: center;
-	text-shadow: 2px 2px 1px black;
-}
-</style>
 
