@@ -96,8 +96,8 @@ function attack_animation(){
 		opponent_hp = 1;
 	}
 	var opponent_hp = (opponent_hp/max_opponent_hp)*100;
-	$("#progress").css({"width":user_hp+"%"});
-	$("#progress_opponent").css({"width":opponent_hp+"%"});
+	$("#progress").animate({"width":user_hp+"%"});
+	$("#progress_opponent").animate({"width":opponent_hp+"%"});
 	// Test
 }
 
