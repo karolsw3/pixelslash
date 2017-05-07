@@ -101,7 +101,7 @@
 		</div>
 		<div class="flex">
 			<p style="color: #ff1717; margin-left: 20px"><b><?php echo $lang_hp_short ?>: </b></p><p id="opponent_hp"><?php echo $monster_info['hp'] ?></p>
-			<p style="color: #ff1717"><b><?php echo $lang_attack_short ?>: </b></p><p><?php echo $monster_info['atk'] ?></p>
+			<p style="color: #ff1717; margin-left: 20px"><b><?php echo $lang_attack_short ?>: </b></p><p><?php echo $monster_info['atk'] ?></p>
 			<p style="color: #307449; margin-left: 20px"><b><?php echo $lang_defense_short ?>: </b></p><p><?php echo $monster_info['def'] ?></p>
 		</div>
 		<div class="flex">
