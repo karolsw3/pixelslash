@@ -29,7 +29,7 @@
 	<?php		
 	}
 	?>
-	<div style="display: inline-flex; margin: 0 auto; left: 0; right: 0;">
+	<div style="display: inline-flex; margin: 0 auto; left: 0; right: 0; font-size: 30px;">
 	<?	
 	if($page>0){
 		?>
