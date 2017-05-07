@@ -22,14 +22,14 @@
 		$user_info = mysqli_fetch_array($query1);
 	?>
 		<div class="arena_cell" style="height: 104px">
-			<p style="margin: auto 0">#<?php echo $x+1 ?></p>
+			<p style="margin: auto 10px">#<?php echo $x+1 ?></p>
 			<?php $another_user=$user_info['user']; include('user_image.php'); ?>
 			<p style="margin: auto"><?php echo $user_info['lvl']."lvl ".$user_info['user'] ?></p>
 		</div>
 	<?php		
 	}
 	?>
-	<div style="display: flex">
+	<div style="display: flex; margin: 0 auto; left: 0; right: 0;">
 	<?	
 	if($page>0){
 		?>
