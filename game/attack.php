@@ -55,6 +55,6 @@
 
 	echo "<p id='opponent_hp'>".$_SESSION['opponent_hp']."</p>";
 
-	echo "<p id='user_hp'>".$_SESSION['user_hp']."</p>";
+	echo "<p id='actual_user_hp'>".$_SESSION['user_hp']."</p>";
 
 	
