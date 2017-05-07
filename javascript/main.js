@@ -91,6 +91,6 @@ function attack_animation(){
 
 	var opponent_hp = $("#opponent_hp").val();
 	console.log(user_hp+" lol "+user_hp+" lol "+max_user_hp);
-	$("#progress").css({"width":user_hp});
+	$("#progress").css({"width":user_hp+"%"});
 }
 
