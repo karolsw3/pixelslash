@@ -46,7 +46,7 @@
 					}
 
 					if($player_lvl<$item_info["lvl"]){
-						echo "This item is for ".$item_info["lvl"]."lvl players. You have got ".$player_lvl."lvl";
+						echo "<p style='text-align: center'>This item is for ".$item_info["lvl"]."lvl players. You have got ".$player_lvl."lvl</p>";
 						?>
 						<button onclick="sound_play('click'); display('shop_gui.php');" class="game_button"><p><?php echo $lang_Back ?></p></button>
 						<?php
