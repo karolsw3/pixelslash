@@ -6,6 +6,12 @@
 	$user_info = mysqli_fetch_array($query);
 	$user_chests = explode(";",$user_info['chests']);
 	$how_much_chests = count($user_chests);
+	for($i=0;$i<$how_much_chests;$i++){
+		if($user_chests[$i] == ""){
+			unset($user_chests[$i]);
+		}
+	}
+	$how_much_chests = count($user_chests);
 
 ?>
 <div id="buttons2">
