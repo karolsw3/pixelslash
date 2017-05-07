@@ -81,8 +81,8 @@ window.setInterval(function(){
 }, 1000);
 
 function attack_animation(){
-	var user_hp = $("#actual_user_hp").val();
-	var max_user_hp = $("#user_hp").val();
+	var user_hp = parseInt($("#actual_user_hp").html());
+	var max_user_hp = parseInt($("#user_hp").html());
 
 	var percent_user_hp = (user_hp/max_user_hp);
 
