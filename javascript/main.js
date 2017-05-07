@@ -89,8 +89,14 @@ function attack_animation(){
 
 	var user_hp = (user_hp/max_user_hp)*100;
 
-	var opponent_hp = $("#opponent_hp").val();
-	console.log(user_hp+" lol "+user_hp+" lol "+max_user_hp);
-	$("#progress").css({"width":user_hp+"%"});
+	var opponent_hp = parseInt($("#actual_opponent_hp").html());
+	var max_opponent_hp = parseInt($("#opponent_hp").html());
+
+	if(opponent_hp === NaN){
+		opponent_hp = 1;
+	}
+	var opponent_hp = (opponent_hp/max_opponent_hp)*100;
+
+	$("#progress_opponent").css({"width":opponent_hp+"%"});
 }
 

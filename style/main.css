@@ -156,7 +156,7 @@ p {
 	background: grey;
 	height: 20px;
 }
-#progress{
+#progress,#progress_opponent{
 	width: 100%;
 	background: red;
 	height: 100%;

@@ -100,11 +100,16 @@
 			<p><?php echo $monster_info['lvl'] ?>lvl</p>
 		</div>
 		<div class="flex">
+				<p style="color: #ff1717; margin-left: 20px"><b><?php echo $lang_hp_short ?>: </b></p><p id="opponent_hp"><?php echo $monster_info['hp'] ?></p>
 				<p style="color: #ff1717"><b><?php echo $lang_attack_short ?>: </b></p><p><?php echo $monster_info['atk'] ?></p>
 				<p style="color: #307449; margin-left: 20px"><b><?php echo $lang_defense_short ?>: </b></p><p><?php echo $monster_info['def'] ?></p>
 		</div>
 	</div>
-
+	<div class="flex">
+		<div id="bar">
+			<div id="progress_opponent"></div>
+		</div>
+	</div>
 </div>
 
 <button class="game_button" onclick="sound_play('click'); post_data('game/attack.php', '<?php echo $data ?>', 'log'); attack_animation()"><p><?php echo "Attack"; ?></p></button>
