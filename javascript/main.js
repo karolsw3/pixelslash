@@ -87,10 +87,10 @@ function attack_animation(){
 	}
 	var max_user_hp = parseInt($("#user_hp").html());
 
-	var percent_user_hp = (user_hp/max_user_hp);
+	var user_hp = (user_hp/max_user_hp)*100;
 
 	var opponent_hp = $("#opponent_hp").val();
-	console.log(user_hp+" lol "+percent_user_hp+" lol "+max_user_hp);
-	$("#progress").css({"width":percent_user_hp*100});
+	console.log(user_hp+" lol "+user_hp+" lol "+max_user_hp);
+	$("#progress").css({"width":user_hp});
 }
 
