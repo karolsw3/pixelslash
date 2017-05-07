@@ -87,6 +87,7 @@ function attack_animation(){
 	var percent_user_hp = (user_hp/max_user_hp);
 
 	var opponent_hp = $("#opponent_hp").val();
+	console.log(percent_user_hp);
 	$("#progress").css({"width":percent_user_hp});
 }
 
