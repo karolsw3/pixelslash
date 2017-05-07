@@ -81,7 +81,7 @@ window.setInterval(function(){
 }, 1000);
 
 function attack_animation(){
-	$("#attack").animate({"opacity":"0"}, 500).animate({"opacity":"1","pointer-events":"auto"}, 500);
+	$("#attack").animate({"opacity":"0"}, 500).animate({"opacity":"1"}, 500);
 	var user_hp = parseInt($("#actual_user_hp").html());
 	if(user_hp === NaN){
 		user_hp = 1;
