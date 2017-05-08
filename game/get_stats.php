@@ -77,6 +77,7 @@
 		echo json_encode($arr);
 
 	}
+	get_user_stats();
 ?>
 
 
