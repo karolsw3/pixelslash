@@ -54,6 +54,7 @@
 	</form>
 		<button id="Register" class="game_button" onclick="sound_play('click'); display('show_register_form.php')"><p><?php echo $lang_Register ?></p></button>
 	<?php } ?>
+		<p style="color: orange">* Update 0.0.1 *<br>It's now much easier to lvl up!</p>
 	</div>
 	<img src="images/back_top.png" height="60" style="transform: rotate(180deg); width: 100%"/>
 
@@ -64,6 +65,7 @@
 		document.head.appendChild(fhs);document.write("<span id='o_"+fhs_id+"'></span>");
 		</script>
 	</div>
+
 
 	<p style="cursor: pointer; color: rgba(140,140,140,0.3); text-align: center; margin-top: 10px">Proudly developed by Karol Swierczek</p>
 	<p style="cursor: pointer; color: rgba(140,140,140,0.3); text-align: center; margin-top: 10px">2017</p>
