@@ -1,11 +1,11 @@
 <?php
-	$chances_to_win_a_chest = 3;
+	$chances_to_win_a_chest = 12;
 	$common = 50;
 	$rare = 20;
 	$mighty = 5;
 	$legendary = 1;
 	$number = rand($chances_to_win_a_chest,100);
-	if($number>$chances_to_win_a_chest){
+	if($number<$chances_to_win_a_chest){
 		$number = rand(0,$common);
 		if($number==$legendary){
 			$won_chest_rarity = "legendary"; 
