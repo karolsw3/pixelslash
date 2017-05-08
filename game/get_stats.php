@@ -11,7 +11,7 @@
 	}
 
 	function get_user_stats(){
-
+		include("../config.php");
 		$user_login = $_SESSION['login'];
 		$query = mysqli_query($a, "select * from `users` where user='$user_login'");
 		$user_data = mysqli_fetch_array($query);
