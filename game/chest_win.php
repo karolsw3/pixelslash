@@ -1,5 +1,5 @@
 <?php
-	$chances_to_win_a_chest = 12;
+	$chances_to_win_a_chest = 3;
 	$common = 50;
 	$rare = 20;
 	$mighty = 5;
