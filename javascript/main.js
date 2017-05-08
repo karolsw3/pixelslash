@@ -84,9 +84,6 @@ function secondsLeft() {
 function attack_animation(){
 	$("#attack").animate({"opacity":"0"}, 100).animate({"opacity":"1"}, 100);
 	var user_hp = Number($("#actual_user_hp").html());
-	if(isNaN(user_hp)){
-		user_hp = 1;
-	}
 	var max_user_hp = Number($("#user_hp").html());
 
 	var user_hp = (user_hp/max_user_hp)*100;
@@ -94,9 +91,6 @@ function attack_animation(){
 	var opponent_hp = Number($("#actual_opponent_hp").html());
 	var max_opponent_hp = Number($("#opponent_hp").html());
 
-	if(isNaN(opponent_hp)){
-		opponent_hp = 1;
-	}
 	var opponent_hp = (opponent_hp/max_opponent_hp)*100;
 	$("#progress").animate({"width":user_hp+"%"}, 200);
 	$("#progress_opponent").animate({"width":opponent_hp+"%"}, 200);
