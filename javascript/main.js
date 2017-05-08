@@ -70,30 +70,31 @@ function show_page(page_number){
 	post_data('game/changepage.php', 'page='+page_number, 'game');
 }
 
-window.setInterval(function(){
-  var seconds_left = parseInt($("#energy_seconds_left").text());
-  if(seconds_left<1){
-	  $("#energy_seconds_left").html(0);
-  }else{
-	seconds_left--;
-	$("#energy_seconds_left").html(seconds_left);
-  }
-}, 1000);
+function secondsLeft() {
+	var seconds_left = Number($("#energy_seconds_left").text());
+	if(seconds_left<1){
+		$("#energy_seconds_left").html(0);
+	}else{
+		seconds_left--;
+		$("#energy_seconds_left").html(seconds_left);
+	}
+	setTimeout(secondsLeft, 1000)
+} secondsLeft();
 
 function attack_animation(){
 	$("#attack").animate({"opacity":"0"}, 100).animate({"opacity":"1"}, 100);
-	var user_hp = parseInt($("#actual_user_hp").html());
-	if(user_hp === NaN){
+	var user_hp = Number($("#actual_user_hp").html());
+	if(isNaN(user_hp)){
 		user_hp = 1;
 	}
-	var max_user_hp = parseInt($("#user_hp").html());
+	var max_user_hp = Number($("#user_hp").html());
 
 	var user_hp = (user_hp/max_user_hp)*100;
 
-	var opponent_hp = parseInt($("#actual_opponent_hp").html());
-	var max_opponent_hp = parseInt($("#opponent_hp").html());
+	var opponent_hp = Number($("#actual_opponent_hp").html());
+	var max_opponent_hp = Number($("#opponent_hp").html());
 
-	if(opponent_hp === NaN){
+	if(isNaN(opponent_hp)){
 		opponent_hp = 1;
 	}
 	var opponent_hp = (opponent_hp/max_opponent_hp)*100;
