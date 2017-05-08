@@ -27,6 +27,6 @@
 	<img src="images/chest_button.png" height="30"></p></button>	
 	<button onclick="sound_play('click'); display('shop_gui.php')" class="game_button"><p><img src="images/shop_button.png" height="30"><?php echo $lang_Shop ?><img src="images/shop_button.png" height="30"></p></button>
 	<button onclick="sound_play('click'); display('hall_of_fame.php')" class="game_button"><p><img src="images/podium_button.png" height="30"><?php echo $lang_Hall_Of_Fame ?><img src="images/podium_button.png" height="30"></p></button>
-	<p style="color: orange">* Update 0.0.1 *<br>It's now much easier to lvl up!</p>	
+	<p style="color: orange">* Update 0.0.2 *<br>New rare items in shop!</p>	
 </div>
 <button id="Logout" onclick="sound_play('click'); logout()" class="game_button"><p><img src="images/logout_button.png" height="30"><?php echo $lang_Logout ?><img src="images/logout_button.png" height="30"></p></button>
