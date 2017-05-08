@@ -54,8 +54,8 @@
 	</form>
 		<button id="Register" class="game_button" onclick="sound_play('click'); display('show_register_form.php')"><p><?php echo $lang_Register ?></p></button>
 	<?php } ?>
-		<p style="color: orange">* Update 0.0.1 *<br>It's now much easier to lvl up!</p>
 	</div>
+	<p style="color: orange">* Update 0.0.1 *<br>It's now much easier to lvl up!</p>
 	<img src="images/back_top.png" height="60" style="transform: rotate(180deg); width: 100%"/>
 
 	<div style="text-align: center; margin: 0 auto; left: 0; right:0; margin-top: 10px;">
