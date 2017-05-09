@@ -2,8 +2,6 @@
 	session_start();
 	include("../config.php");
 
-
-
 	$user_attack_power = rand($_POST['user_attack_power'],$_POST['user_attack_power']*2);
 	$user_defense_power = rand($_POST['user_defense_power'],$_POST['user_defense_power']*2);
 	$user_hp = $_POST['user_hp'];
@@ -35,24 +33,34 @@
 	if($_SESSION['opponent_hp']<1){ // WIN
 		include('chest_win.php');
 		mysqli_query($a, "UPDATE `p505207_db`.`users` SET `silver_coins`=`silver_coins`+'$reward',`exp`=`exp`+'$exp_reward' WHERE `users`.`user`='$user_name'"); // SAVE REWARD
-		$communicat = "You won ".$reward." silver coins ";
-		if($chest_info['rarity'] != null){
-			$communicat .= "and ".$chest_info['rarity']." chest"; 
-		}
-
-		?>
-			<script>communicat("text", "<?php echo $communicat ?>")</script>
-		<?php		
+		$status = "WIN";	
+		$chest = $won_chest_rarity;
 		exit();
 	}
 	if($_SESSION['user_hp']<1){ // LOSE
-		?>
-			<script>communicat("text", "You lost")</script>
-		<?php
+		$status = "LOST";
 		//dead
 		exit();
 	}
 
-	echo "<p id='actual_opponent_hp' style='display: none'>".$_SESSION['opponent_hp']."</p>";
+	if($chest == null){
+		$chest = "none";
+	}
 
-	echo "<p id='actual_user_hp' style='display: none'>".$_SESSION['user_hp']."</p>";
+	$arr = array('user_hp' => $_SESSION['user_hp'], 'opponent_hp' => $_SESSION['opponent_hp'], 'status' => $status, 'hp' => $user_hp, 'won_silver_coins' => $reward, 'chest' => $chest);
+	return json_encode($arr);
+
+
+	/*
+
+		{
+		"user_hp": int,
+		"opponent_hp": int,
+		"status": WIN/LOST string,
+		"won_silver_coins": int,
+		"chest": none/rarity string
+		}
+
+	*/
+?>
+
