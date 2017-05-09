@@ -1,5 +1,4 @@
 <?php
-	include '../config.php';
 	function lvl_up($mysqli,$user,$user_lvl){
 		$won_sc = ($user_lvl+1)*500;
 		$won_gc = 5;
