@@ -3,6 +3,7 @@
 	include("../config.php");
 	$user = mysqli_real_escape_string($a, $_POST['user']);
 	$password = mysqli_real_escape_string($a, $_POST['password']);
+
 	if($password != $_POST['password_repeat']){
 		echo "Passwords are not maching.";
 		exit();
@@ -13,13 +14,13 @@
     }
 
 	$password = md5($password);
-	echo "select * from users where user='$user'<br>";
+
 	$query = mysqli_query($a, "select * from users where user='$user'");
+	
 	if(mysqli_num_rows($query) > 0){
 		echo "There's already an user with that name.";
 		exit();
 	}else{
-		echo "insert into users (user,password) values ('$user','$password')";
 		mysqli_query($a,"insert into users (user,password) values ('$user','$password')");
 		$_SESSION["user_logged"] = true;
 		$_SESSION['login'] = $_POST['user'];

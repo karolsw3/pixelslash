@@ -1,4 +1,3 @@
-
 <div style="position:relative;">
 	<div>
 	<?php
@@ -40,5 +39,4 @@
 			}
 		}
 	?>
-
 </div>
