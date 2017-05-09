@@ -41,7 +41,7 @@
 
 	<img src="images/back_top.png" height="60" style="width: 100%"/>
 	<div id="game">
-	<img src="images/front.png"/>
+	<img src="images/front.png" width="228"/>
 	<?php
 		if($user_logged){	
 			include("game/logged_user_page.php");
