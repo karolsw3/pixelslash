@@ -7,7 +7,7 @@
 	}
 
 	function get_max_exp($_user_lvl){ // Calculating maximum exp per lvl
-		return floor(pow(2,$_user_lvl+1)*$_user_lvl);
+		return floor(pow(2,$_user_lvl+1)*$_user_lvl*4);
 	}
 
 	if($show_short_stats == ""){
