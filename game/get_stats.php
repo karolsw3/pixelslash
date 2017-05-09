@@ -11,6 +11,7 @@
 	}
 
 	function get_user_stats(){
+		session_start();
 		include("../config.php");
 		$user_login = $_SESSION['login'];
 		$query = mysqli_query($a, "select * from `users` where user='$user_login'");
@@ -63,6 +64,7 @@
 		$user_def = ($user_data['def']+$eq_def);
 		$user_hp = ($user_data['hp']+$eq_hp);
 		$user_exp = $user_data['exp'];
+		$user_test = $user_data['lvl'];
 		$user_maxexp = $max_exp;
 		$user_energy = $user_data['energy'];
 		$user_maxenergy = $user_data['maxenergy'];
