@@ -4,8 +4,7 @@
 	$rare = 20;
 	$mighty = 5;
 	$legendary = 1;
-	$number = rand($chances_to_win_a_chest,100);
-	if($number<$chances_to_win_a_chest){
+	if($chances_to_win_a_chest>rand(0,100)){
 		$number = rand(0,$common);
 		if($number==$legendary){
 			$won_chest_rarity = "legendary"; 
