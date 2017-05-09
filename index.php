@@ -31,6 +31,7 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.min.js"></script>
 	<script src="javascript/main.js"></script>
+	<script src="dist/bundle.js"></script>
 </head>
 
 <body>

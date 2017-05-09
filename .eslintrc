@@ -1,0 +1,22 @@
+{
+	"globals": {
+    "document": true,
+    "window": true,
+    "DOMParser": true,
+    "fetch": true,
+    "XMLHttpRequest": true
+	},
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalDecorators": true
+    }
+  },
+  "extends": "airbnb",
+  "rules": {
+    "func-names": ["error", "never"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-param-reassign": ["error", { "props": false }],
+    "global-require": 0
+  }
+}
