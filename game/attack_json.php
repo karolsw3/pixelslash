@@ -11,9 +11,10 @@
 	$opponent_defense_power = rand($_POST['opponent_defense_power'],$_POST['opponent_defense_power']*2);
 	$opponent_hp = $_POST['opponent_hp'];
 	$opponent_name = $_POST['opponent_name'];
+	$opponent_lvl = $_POST['opponent_lvl'];
 
 	$reward = $_POST['reward'];
-	$exp_reward = pow(2,$_POST['opponent_attack_power']+1)*5;
+	$exp_reward = pow(2,$_POST['opponent_attack_power']+1)*$opponent_lvl*2;
 
 	if($_SESSION['opponent_hp'] != null && $_SESSION['user_hp'] != null){
 		$opponent_hp = $_SESSION['opponent_hp'];

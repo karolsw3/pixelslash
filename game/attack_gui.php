@@ -59,6 +59,7 @@
 		$opponent_defense_power = $monster_info['def']-$user_atk;
 
 		$opponent_hp = $monster_info['hp'];
+		$opponent_lvl = $monster_info['lvl'];
 
 		$data = "user_attack_power=".$user_attack_power."&".
 				"user_defense_power=".$user_defense_power."&".
@@ -67,6 +68,7 @@
 				"opponent_name=".$opponent_name."&".
 				"user_hp=".$user_hp."&".
 				"reward=".$reward."&".
+				"opponent_lvl=".$opponent_lvl."&".
 				"opponent_hp=".$opponent_hp;
 	?>
 </div>
