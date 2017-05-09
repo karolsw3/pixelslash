@@ -16,17 +16,7 @@
 		$query = mysqli_query($a, "select * from `items` where `id`='$item_id'");
 		$item_info = mysqli_fetch_array($query);
 
-		switch ($item_info['rarity']){
-			case 'common':
-				$item_color = "#969696";
-				break;
-			case 'rare':
-				$item_color = "#2849ef";
-				break;
-			case 'mighty':
-				$item_color = "#9d33ff";
-				break;			
-		}
+		include("rarity_color_info.php");
 		?>
 		<div class="arena_cell">
 			<div style="position: relative; top: 0; left: 0;">

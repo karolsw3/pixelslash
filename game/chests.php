@@ -45,6 +45,8 @@
 		if($player_chests[$i] > 0){
 			$chest_id = $player_chests[$i];
 			show_chest($chest_id,$i);	
+		}else{
+			echo $lang_you_dont_have_any_chests;
 		}
 	}
 

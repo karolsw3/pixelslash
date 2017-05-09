@@ -33,6 +33,7 @@
 
 		$query = mysqli_query($a, "select * from items where id='$item_won'");
 		$item_info = mysqli_fetch_array($query);
+		include("rarity_color_info.php");
 		?>
 		<p style="text-align: center; font-size: 34px">YOU WON:</p>
 		<div class="arena_cell">
