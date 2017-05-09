@@ -16,17 +16,7 @@
 		$query = mysqli_query($a, "select * from `items` where `id`='$item_id'");
 		$item_info = mysqli_fetch_array($query);
 
-		switch ($item_info['rarity']){
-			case 'common':
-				$item_color = "#969696";
-				break;
-			case 'rare':
-				$item_color = "#2849ef";
-				break;
-			case 'mighty':
-				$item_color = "#9d33ff";
-				break;			
-		}
+		include("rarity_color_info.php");
 		?>
 		<div class="arena_cell">
 			<div style="position: relative; top: 0; left: 0;">
@@ -42,9 +32,9 @@
 			<p style="margin: auto; color: <?php echo $item_color ?>"><b><?php echo $GLOBALS['lang_defense_short']; ?>: +</b><?php echo $item_info['def']; ?></p>
 			<p style="margin: auto; color: <?php echo $item_color ?>"><b><?php echo $GLOBALS['lang_hp_short']; ?>: +</b><?php echo $item_info['hp']; ?></p>
 		</div>
-		<div class="arena_cell" style="height: auto; border-bottom: 3px solid rgba(0,0,0,0.5)">
+		<div class="arena_cell" style="height: auto; border-bottom: 3px solid rgba(0,0,0,0.5); display: inline-block;">
 			<?php if($action == "equip"){ ?>
-				<a style="margin: auto 0" onclick="sound_play('click'); item_action(<?php echo $item_index_in_player_eq ?>,'sell');"><p class="sell" style="color: red"><?php echo $GLOBALS['lang_Sell']."(".$item_info['price']/4 ?><img src="images/silver_coin.png" height="19">)</p></a>
+				<a style="margin: auto 0; float: right" onclick="sound_play('click'); item_action(<?php echo $item_index_in_player_eq ?>,'sell');"><p class="sell" style="color: red"><?php echo $GLOBALS['lang_Sell']."(".$item_info['price']/4 ?><img src="images/silver_coin.png" height="19">)</p></a>
 			<?php } ?>
 		</div>
 		<?php

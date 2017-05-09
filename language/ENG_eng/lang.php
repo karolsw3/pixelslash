@@ -38,4 +38,5 @@
 	$lang_Reward = "Reward";
 	$lang_Hall_Of_Fame = "Hall of fame";
 	$lang_Bestplayers = "The best players";
+	$lang_you_dont_have_any_chests = "You don't have any chests. Go fight with some monsters or players to get them.";
 ?>
