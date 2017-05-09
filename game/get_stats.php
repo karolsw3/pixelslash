@@ -1,4 +1,5 @@
 <?php
+	include '../config.php';
 	function lvl_up($mysqli,$user,$user_lvl){
 		$won_sc = ($user_lvl+1)*500;
 		$won_gc = 5;
@@ -15,7 +16,6 @@
 		$user_login = $_SESSION['login'];
 		$query = mysqli_query($a, "select * from `users` where user='$user_login'");
 		$user_data = mysqli_fetch_array($query);
-
 		$user_lvl = $user_data['lvl'];
 		$max_exp = get_max_exp($user_lvl);
 
@@ -70,11 +70,9 @@
 
 		$user_silver_coins = $user_data['silver_coins'];
 		$user_golden_coins = $user_data['golden_coins'];
-
 		$arr = array('lvl' => $user_lvl, 'atk' => $user_atk, 'def' => $user_def, 'hp' => $user_hp, 'exp' => $user_exp,
 		 'maxexp' => $user_maxexp, 'energy' => $user_energy,'maxenergy' => $user_maxenergy, 'silver_coins' => $user_silver_coins, 'golden_coins' => $user_golden_coins);
-
-		echo json_encode($arr);
+		return json_encode($arr);
 
 	}
 
