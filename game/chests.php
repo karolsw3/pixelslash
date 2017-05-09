@@ -16,17 +16,7 @@
 		$query = mysqli_query($a, "select * from `chests` where `id`='$chest_id'");
 		$chest_info = mysqli_fetch_array($query);
 
-		switch ($chest_info['rarity']){
-			case 'common':
-				$chest_color = "#969696";
-				break;
-			case 'rare':
-				$chest_color = "#2849ef";
-				break;
-			case 'mighty':
-				$chest_color = "#9d33ff";
-				break;			
-		}
+		include("rarity_color_info.php");
 		?>
 		<div class="arena_cell">
 			<div style="position: relative; top: 0; left: 0;">
@@ -40,14 +30,16 @@
 	}
 
 	$player_chests = explode(";", $user_data["chests"]); 
-
+	$count_chests = 0;
 	for($i=0;$i<count($player_chests);$i++){	
 		if($player_chests[$i] > 0){
 			$chest_id = $player_chests[$i];
 			show_chest($chest_id,$i);	
-		}else{
-			echo $lang_you_dont_have_any_chests;
+			$count_chests++;
 		}
+	}
+	if($count_chests == 0){
+		echo $lang_you_dont_have_any_chests;
 	}
 
 	$which_button = 'back';
