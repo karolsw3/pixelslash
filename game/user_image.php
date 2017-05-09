@@ -35,7 +35,7 @@
 				<div style="position: absolute; bottom: 4px; left: 28px;">
 					<img src="<?php echo 'images/items/user_image/'.$item_info['image'] ?>" height="96">	
 				</div>
-				<?
+				<?php
 			}
 		}
 	?>
