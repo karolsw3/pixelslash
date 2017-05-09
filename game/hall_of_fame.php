@@ -30,7 +30,7 @@
 	}
 	?>
 	<div style="display: inline-flex; margin: 0 auto; left: 0; right: 0; font-size: 30px;">
-	<?	
+	<?php
 	if($page>0){
 		?>
 			<a class="buy" style="color: green" onclick="show_page(<?php echo $page-1 ?>)"/><?php echo $page ?></a>
