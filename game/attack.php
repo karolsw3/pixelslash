@@ -43,7 +43,8 @@
 
 		?>
 			<script>communicat("text", "<?php echo $communicat ?>")</script>
-		<?php		
+		<?php	
+		$_SESSION['opponent_hp'] = pow(9,9);	
 		exit();
 	}
 	if($_SESSION['user_hp']<1){ // LOSE
