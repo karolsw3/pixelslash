@@ -16,7 +16,7 @@
 	$opponent_lvl = $_POST['opponent_lvl'];
 
 	$reward = $_POST['reward'];
-	$exp_reward = pow(2,$opponent_lvl+$_POST['opponent_attack_power']/5);
+	$exp_reward = pow(2,$opponent_lvl+$_POST['opponent_attack_power']);
 
 	if($_SESSION['opponent_hp'] != null && $_SESSION['user_hp'] != null){
 		$opponent_hp = $_SESSION['opponent_hp'];
