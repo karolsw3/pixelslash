@@ -56,6 +56,7 @@
 
 		{
 		"user_hp": int,
+		"user_max_hp": int,
 		"opponent_hp": int,
 		"status": WIN/LOST string,
 		"won_silver_coins": int,
