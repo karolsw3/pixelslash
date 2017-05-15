@@ -18,6 +18,6 @@
 		}
 	}
 
-	echo $arr;
+	return json_encode($arr);
 
 ?>
