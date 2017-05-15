@@ -20,4 +20,6 @@
 
 	return json_encode($arr);
 
+	print_r($arr);
+
 ?>
