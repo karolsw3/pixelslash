@@ -4,7 +4,7 @@
 	$user_login = $_SESSION['login'];
 	$query = mysqli_query($a, "select * from `users` where `user`='$user_login'");
 	$user_data = mysqli_fetch_array($query);
-	$player_equipment = explode(";", $user_data["eq"]); 
+	$player_equipment = explode(";", $user_data["eq_weared"]); 
 
 	$arr = [];
 
@@ -17,7 +17,6 @@
 			array_push($arr,$push);
 		}
 	}
-
 	return json_encode($arr);
 
 ?>
