@@ -17,7 +17,7 @@
 			array_push($arr,$push);
 		}
 	}
-
-	return json_encode($arr);
 	echo json_encode($arr);
+	return json_encode($arr);
+
 ?>
