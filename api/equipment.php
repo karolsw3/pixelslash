@@ -9,8 +9,8 @@
 	$arr = [];
 
 	for($i=0;$i<count($player_equipment);$i++){	
-		if($player_weared_equipment[$i] > 0){
-			$item_id = $player_weared_equipment[$i];
+		if($player_equipment[$i] > 0){
+			$item_id = $player_equipment[$i];
 			$query = mysqli_query($a, "select * from `items` where `id`='$item_id'");
 			$item_info = mysqli_fetch_array($query);
 			$push = "{id:".$item_info['id'].",name:.".$item_info['name'].",type:".$item_info['type'].",stats:{rarity:.".$item_info['rarity'].",atk:".$item_info['atk'].",def:".$item_info['def'].",hp:".$item_info['hp'].",price:".$item_info['price']."}}";
@@ -19,7 +19,5 @@
 	}
 
 	return json_encode($arr);
-
 	print_r($arr);
-
 ?>
