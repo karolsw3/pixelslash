@@ -17,7 +17,7 @@
 			array_push($arr,$push);
 		}
 	}
-	echo JSON.parse($arr);
+	echo json_encode($arr);
 	return json_encode($arr);
 
 ?>
