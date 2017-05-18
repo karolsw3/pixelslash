@@ -11,7 +11,7 @@
 			$item_id = $player_equipment[$i];
 			$query = mysqli_query($a, "select * from `items` where `id`='$item_id'");
 			$item_info = mysqli_fetch_array($query);
-			$arr .= array('id' => $item_info["id"], 'name' => $item_info["name"], 'type' => $item_info["type"], 'stats' => array('rarity' => $item_info["rarity"],'atk' => $item_info["atk"],'def' => $item_info["def"],'hp' => $item_info["hp"],'price' => $item_info["price"]));
+			$arr = array('id' => $item_info["id"], 'name' => $item_info["name"], 'type' => $item_info["type"], 'stats' => array('rarity' => $item_info["rarity"],'atk' => $item_info["atk"],'def' => $item_info["def"],'hp' => $item_info["hp"],'price' => $item_info["price"]));
 		}
 	}
 	echo json_encode($arr);
