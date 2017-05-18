@@ -51,7 +51,6 @@
 	$arr = array('user_hp' => $_SESSION['user_hp'], 'opponent_hp' => $_SESSION['opponent_hp'], 'status' => $status, 'hp' => $user_hp, 'won_silver_coins' => $reward, 'chest' => $chest);
 	return json_encode($arr);
 
-
 	/*
 
 		{
