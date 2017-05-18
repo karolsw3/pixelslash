@@ -6,8 +6,6 @@
 	$user_data = mysqli_fetch_array($query);
 	$player_equipment = explode(";", $user_data["eq"]); 
 
-	$arr = [];
-
 	for($i=0;$i<count($player_equipment);$i++){	
 		if($player_equipment[$i] > 0){
 			$item_id = $player_equipment[$i];
