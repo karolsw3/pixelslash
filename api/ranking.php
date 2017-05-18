@@ -16,6 +16,7 @@
 			$arr .= ",";
 		}
 	}
-	$arr = '"data":['.$arr."]";
-	echo "{".$arr."}";
+	$object = new stdClass();
+	$object -> data = $arr;
+	echo $object -> data;
 ?>
