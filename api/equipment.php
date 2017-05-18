@@ -17,5 +17,5 @@
 		}
 	}
 	echo json_encode($arr);
-	return json_encode($arr);
+	//return json_encode($arr);
 ?>
