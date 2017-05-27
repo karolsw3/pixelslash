@@ -13,8 +13,8 @@
 		$_SESSION['login'] = $_POST['user'];
 		$_SESSION["token"] = $token;
 		mysqli_query($a, "update users set token='$token' WHERE user='$user'");
-		include("logged_user_page.php");
-
+		
+		// foward to logged_user_page.php
 		echo '{"logged":true}';
 	}else{
 		echo '{"logged":false}';
