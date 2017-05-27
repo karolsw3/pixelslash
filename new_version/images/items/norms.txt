@@ -1,0 +1,5 @@
+helmet_n
+chestplate_n
+legs_n
+sword_n
+cape_n

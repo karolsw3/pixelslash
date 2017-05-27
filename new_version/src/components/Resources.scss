@@ -1,0 +1,23 @@
+.Resources {
+  display: flex;
+  align-items: flex-start;
+}
+
+.icon {
+  display: block;
+  height: 16px;
+  width: 16px;
+  margin-left: 5px;
+  &_normal {
+    height: 19px;
+    width: 19px;
+  }
+  &_medium {
+    height: 32px;
+    width: 32px;
+  }
+  &_large {
+    height: 48px;
+    width: 48px;
+  }
+}

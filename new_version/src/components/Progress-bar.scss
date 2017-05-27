@@ -1,0 +1,30 @@
+.Progressbar {
+  margin: 5px 0;
+}
+.bar {
+  width: 100%;
+  height: 25px;
+  border: 3px solid #4c4d4f;
+  background: #6a6d72;
+  box-sizing: border-box;
+}
+.fill {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  &_health {
+    background-color: #b73535;
+    border-top: 3px solid #f19b9c;
+    outline: 3px solid #d03e3e;
+  }
+  &_energy {
+    background-color: #8b479a;
+    border-top: 3px solid #dab9d4;
+    outline: 3px solid #a76bab;
+  }
+  &_exp {
+    background-color: #76b13b;
+    border-top: 3px solid #beda85;
+    outline: 3px solid #92c858;
+  }
+}
