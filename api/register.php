@@ -4,7 +4,7 @@
 	$user = mysqli_real_escape_string($a, $_GET['user']);
 	$password = mysqli_real_escape_string($a, $_GET['password']);
 
-	if($password != $_POST['password_repeat']){
+	if($password != $_GET['password_2']){
 		echo '{"registered":"error_badPasswords"}';
 		exit();
 	}
