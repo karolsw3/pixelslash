@@ -31,7 +31,7 @@
 			}
 	}
 
-	echo '[{"alert":"'.$alert.'"}]';
+	echo json_encode(array('alert' => $alert));
 ?>
 
 

@@ -12,7 +12,7 @@
 			$arr .= ",";
 		}
 	}
-	echo "[".$arr."]";
+	echo json_encode($arr);
 ?>
 
 
