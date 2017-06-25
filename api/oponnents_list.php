@@ -1,14 +1,19 @@
 <?php
 	session_start();
 	include("../config.php");
-	$query = mysqli_query($a, "select * from monsters ORDER BY lvl ASC");
-	$how_much_items = mysqli_num_rows($query);
+	$login = $_SESSION['login'];
+	$query= mysqli_query($a,"select * from users WHERE user='$login'");
+	$user_info = mysqli_fetch_array($query);
+	$user_lvl = $user_info['lvl'];
 
-	for($i=0;$i<$how_much_items;$i++){	
-		$item_info = mysqli_fetch_array($query);
-		$unencoded = array('id' => $item_info["id"], 'name' => $item_info["name"], 'type' => $item_info["type"], 'stats' => array('rarity' => $item_info["rarity"],'atk' => $item_info["atk"],'def' => $item_info["def"],'hp' => $item_info["hp"],'price' => $item_info["price"]));
+	$query = mysqli_query($a, "select * from monsters WHERE lvl>'$user_lvl-2' AND lvl<'$user_lvl+2' ORDER BY lvl ASC");
+	$how_much_monsters = mysqli_num_rows($query);
+
+	for($i=0;$i<$how_much_monsters;$i++){	
+		$monster_info = mysqli_fetch_array($query);
+		$unencoded = array('name' => $monster_info["name"],'lvl' => $monster_info["lvl"], 'hp' => $monster_info["hp"], 'atk' => $monster_info["atk"], 'def' => $monster_info["def"],'image' => $monster_info["image"],'background' => $monster_info["background"],'reward' => $monster_info["reward"]);
 		$arr .= json_encode($unencoded);
-		if($i<$how_much_items-1){
+		if($i<$how_much_monsters-1){
 			$arr .= ",";
 		}
 	}
