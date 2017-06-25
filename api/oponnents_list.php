@@ -6,7 +6,7 @@
 	$user_info = mysqli_fetch_array($query);
 	$user_lvl = $user_info['lvl'];
 
-	$query = mysqli_query($a, "select * from monsters WHERE lvl>'$user_lvl-2' AND lvl<'$user_lvl+2' ORDER BY lvl ASC");
+	$query = mysqli_query($a, "select * from monsters WHERE lvl>'$user_lvl'-2 AND lvl<'$user_lvl'+2 ORDER BY lvl ASC");
 	$how_much_monsters = mysqli_num_rows($query);
 
 	for($i=0;$i<$how_much_monsters;$i++){	
