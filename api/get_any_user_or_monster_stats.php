@@ -11,7 +11,7 @@
 	}
 
 	if($isMonster){
-		$query = mysqli_query($a, "select * from `monsters` where user='$user_login'");
+		$query = mysqli_query($a, "select * from `monsters` where name='$user_login'");
 	}else{
 		$query = mysqli_query($a, "select * from `users` where user='$user_login'");
 	}
