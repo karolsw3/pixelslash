@@ -76,23 +76,28 @@
 	if($opponent_attack_power>0){
 		$_SESSION['user_hp'] -= $opponent_attack_power;
 	}
-	if($_SESSION['opponent_hp']<1){ // WIN
+	if($_SESSION['opponent_hp']<1 && !$_SESSION['attack_end']){ // WIN
 		include('chest_win.php');
 		mysqli_query($a, "UPDATE `p505207_db`.`users` SET `silver_coins`=`silver_coins`+'$reward',`exp`=`exp`+'$exp_reward' WHERE `users`.`user`='$user'"); // SAVE REWARD
 		$status = "WIN";	
 		$chest = $won_chest_rarity;
-		//exit();
+		$_SESSION['user_hp'] = null;
+		$_SESSION['opponent_hp'] = null;
 	}
-	if($_SESSION['user_hp']<1){ // LOSE
+	if($_SESSION['user_hp']<1 && !$_SESSION['attack_end']){ // LOSE
 		$status = "LOST";
-		//dead
-		//exit();
+		$_SESSION['user_hp'] = null;
+		$_SESSION['opponent_hp'] = null;
+
 	}
 
 	if($chest == null){
 		$chest = "none";
 	}
 	$arr = array('user_hp' => $_SESSION['user_hp'], 'opponent_hp' => $_SESSION['opponent_hp'], 'status' => $status, 'won_silver_coins' => $reward, 'chest' => $chest);
+
+	$_SESSION['attack_end'] = true; // attack_request.php Changes this to false
+
 	echo json_encode($arr);
 
 	/*
