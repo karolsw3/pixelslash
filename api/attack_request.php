@@ -7,7 +7,7 @@
 	$opponent_name = $_GET['opponent_name'];
 	$is_monster = $_GET['is_monster'];
 
-	$query = mysqli_query("select * from users where user='$user'");
+	$query = mysqli_query($a, "select * from users where user='$user'");
 	$user_data = mysqli_fetch_array($query);
 
 	if($isMonster){
