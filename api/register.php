@@ -23,7 +23,7 @@
 	}else{
 		mysqli_query($a,"insert into users (user,password) values ('$user','$password')");
 		$_SESSION["user_logged"] = true;
-		$_SESSION['login'] = $_POST['user'];
+		$_SESSION['user'] = $_POST['user'];
 		echo '{"registered":true}';
 		// foward to logged_user_page.php
 	}

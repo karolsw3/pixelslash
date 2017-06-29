@@ -2,10 +2,10 @@
 	session_start();
 	include("../config.php");
 
-	$user = $_SESSION['login'];
+	$user = $_SESSION['user'];
 
 	$opponent_name = $_GET['opponent_name'];
-	$isMonster = $_GET['isMonster'];
+	$is_monster = $_GET['is_monster'];
 
 	$query = mysqli_query("select * from users where user='$user'");
 	$user_data = mysqli_fetch_array($query);
@@ -27,8 +27,8 @@
 		$data = "";
 		$status = true;		
 
-		$_SESSION["oponnent_name"] = $opponent_name;
-		$_SESSION["isMonster"] = $isMonster;
+		$_SESSION["opponent_name"] = $opponent_name;
+		$_SESSION["is_monster"] = $is_monster;
 		$_SESSION['attack_end'] = false; // See attack.php
 	}
 

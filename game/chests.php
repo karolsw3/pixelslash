@@ -2,7 +2,7 @@
 	session_start();
 	include("config.php");
 	include("user_stats.php");
-	$user_login = $_SESSION['login'];
+	$user_login = $_SESSION['user'];
 	$query = mysqli_query($a, "select * from `users` where `user`='$user_login'");
 	$user_data = mysqli_fetch_array($query);
 

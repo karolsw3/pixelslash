@@ -3,7 +3,7 @@
 	include("../config.php");
 	$min_page = $_GET['page']*10;
 	$max_page = $min_page+10;
-	$login = $_SESSION['login'];
+	$login = $_SESSION['user'];
 	$query= mysqli_query($a,"select * from users WHERE user='$login'");
 	$user_info = mysqli_fetch_array($query);
 	$user_lvl = $user_info['lvl'];

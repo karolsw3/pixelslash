@@ -12,7 +12,7 @@
 	$percent_of_real_price_in_shop = 0.25; // Set selling price of items according to the prices in shop
 
 	// Users information
-	$user_login = $_SESSION['login'];
+	$user_login = $_SESSION['user'];
 	$query = mysqli_query($a, "select * from `users` where `user`='$user_login'");
 	$user_data = mysqli_fetch_array($query);
 	$player_weared_equipment = explode(";", $user_data["eq_weared"]); 

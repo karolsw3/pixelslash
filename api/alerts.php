@@ -3,7 +3,7 @@
 	include("../config.php");
 	$action = $_POST["action"];
 	$item_name = $_POST["item_name"];
-	$user = $_SESSION['login'];
+	$user = $_SESSION['user'];
 
 	$alert = "";
 

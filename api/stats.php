@@ -12,14 +12,14 @@
 
 	session_start();
 	include("../config.php");
-	$user_login = $_SESSION['login'];
+	$user_login = $_SESSION['user'];
 	$query = mysqli_query($a, "select * from `users` where user='$user_login'");
 	$user_data = mysqli_fetch_array($query);
 	$user_lvl = $user_data['lvl'];
 	$max_exp = get_max_exp($user_lvl);
 
 	$time = time();
-	$user = $_SESSION['login'];
+	$user = $_SESSION['user'];
 
 	for($n=1;$n<30;$n++){
 		if($time > $user_data['last_time_energy_point_used']+60*$energy_renew_time_in_minutes*$n && $user_data['last_time_energy_point_used'] != 0){ // 1 ENERGY EVERY $energy_renew_time_in_minutes MINUTES

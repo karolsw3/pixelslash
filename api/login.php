@@ -10,7 +10,7 @@
 	if( mysqli_num_rows($query) > 0 ){
 		$token = substr(md5(uniqid(mt_rand(), true)) , 0, 64);
 		$_SESSION["user_logged"] = true;
-		$_SESSION['login'] = $_POST['user'];
+		$_SESSION["user"] = $_POST['user'];
 		$_SESSION["token"] = $token;
 		mysqli_query($a, "update users set token='$token' WHERE user='$user'");
 		
