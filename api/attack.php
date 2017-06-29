@@ -125,7 +125,7 @@
 		'opponent_hp' => $_SESSION['opponent_hp'], 
 		'status' => $status, 
 		'won_silver_coins' => $reward, 
-		'chest' => $chest
+		'chest' => $chest,
 		'message' => $message
 	);
 
