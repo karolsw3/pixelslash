@@ -6,7 +6,7 @@
 	$query = mysqli_query($a,"select * from users where user='$user'");
 	$user_data = mysqli_fetch_array($query);
 
-	if(!$_SESSION['attack_end']){
+	if(!$_SESSION['attack_end'] || $_SESSION['attack_end'] !== null){
 		if($user_data['energy'] > 0){
 			if($opponent_name != null){
 				/*

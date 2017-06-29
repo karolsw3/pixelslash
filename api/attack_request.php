@@ -17,7 +17,7 @@
 	}
 	$opponent_data = mysqli_fetch_array($query);	
 
-	if($user_data["energy"] < 1){
+	if($user_data["energy"] < 1 || $user == null){
 		$message = "You don't have enough energy to attack!";
 		$data = "";
 		$status = false;
