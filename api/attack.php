@@ -2,6 +2,7 @@
 	session_start();
 	include("../config.php");
 	$user = $_SESSION['user'];
+	$opponent_name = $_SESSION["opponent_name"];
 	$query = mysqli_query($a,"select * from users where user='$user'");
 	$user_data = mysqli_fetch_array($query);
 
@@ -11,7 +12,6 @@
 				/*
 					USER AND OPPONENT DATA
 				*/
-				$opponent_name = $_SESSION["opponent_name"];
 				$is_monster = $_SESSION["is_monster"];
 
 				$player_weared_equipment = explode(";", $user_data["eq_weared"]);
