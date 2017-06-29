@@ -126,6 +126,7 @@
 		'status' => $status, 
 		'won_silver_coins' => $reward, 
 		'chest' => $chest
+		'message' => $message
 	);
 
 	echo json_encode($arr);
