@@ -29,7 +29,7 @@
 
 		$_SESSION["opponent_name"] = $opponent_name;
 		$_SESSION["is_monster"] = $is_monster;
-		$_SESSION['attack_end'] = false; // See attack.php
+		$_SESSION['attack_continue'] = true; // See attack.php
 	}
 
 	echo json_encode(array("message" => $message, "data" => $data, "status" => $status));

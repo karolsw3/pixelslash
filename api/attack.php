@@ -6,7 +6,7 @@
 	$query = mysqli_query($a,"select * from users where user='$user'");
 	$user_data = mysqli_fetch_array($query);
 
-	if(!$_SESSION['attack_end'] || $_SESSION['attack_end'] !== null){
+	if($_SESSION['attack_continue']){
 		if($user_data['energy'] > 0){
 			if($opponent_name != null){
 				/*
@@ -91,13 +91,13 @@
 					$chest = $won_chest_rarity;
 					$_SESSION['user_hp'] = null;
 					$_SESSION['opponent_hp'] = null;
-					$_SESSION['attack_end'] = true; // attack_request.php Changes this to false
+					$_SESSION['attack_continue'] = false; // attack_request.php Changes this to false
 				}
 				if($_SESSION['user_hp']<1){ // LOSE
 					$status = "LOST";
 					$_SESSION['user_hp'] = null;
 					$_SESSION['opponent_hp'] = null;
-					$_SESSION['attack_end'] = true; // attack_request.php Changes this to false
+					$_SESSION['attack_continue'] = false; // attack_request.php Changes this to false
 				}
 
 				if($chest == null){
@@ -107,17 +107,17 @@
 			}else{
 				$status = "ERROR";
 				$message = "Unselected opponent";	
-				$_SESSION['attack_end'] = true;			
+				$_SESSION['attack_continue'] = false;			
 			}
 		}else{
 			$status = "ERROR";
 			$message = "You don't have enough energy to attack";	
-			$_SESSION['attack_end'] = true;		
+			$_SESSION['attack_continue'] = false;		
 		}
 	}else{
 		$status = "ERROR";
 		$message = "You aren't allowed to attack";
-		$_SESSION['attack_end'] = true;
+		$_SESSION['attack_continue'] = false;
 	}
 
 	$arr = array(
